@@ -1,0 +1,8 @@
+room_goto(game_over)
+
+
+
+
+
+
+
