@@ -1,5 +1,5 @@
 // Evento Create
-velocidade = 2;
+velocidade = 3;
 direcao = choose(45, 135, 225, 315); // Direção inicial aleatória entre diagonais
 
 // Calcula as velocidades iniciais

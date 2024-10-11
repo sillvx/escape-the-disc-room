@@ -31,24 +31,24 @@ if (invulneravel) {
 var vel_x = 0;
 var vel_y = 0;
 
-// Movimentação para a direita (tecla D)
-if (keyboard_check(ord("D"))) {
+// Movimentação para a direita (tecla D ou seta direita)
+if (keyboard_check(ord("D")) || keyboard_check(vk_right)) {
     vel_x = 2;
 }
 
-// Movimentação para a esquerda (tecla A)
-if (keyboard_check(ord("A"))) {
+// Movimentação para a esquerda (tecla A ou seta esquerda)
+if (keyboard_check(ord("A")) || keyboard_check(vk_left)) {
     vel_x = -2;
 }
 
-// Movimentação para cima (tecla W)
-if (keyboard_check(ord("W"))) {
+// Movimentação para cima (tecla W ou seta para cima)
+if (keyboard_check(ord("W")) || keyboard_check(vk_up)) {
     vel_y = -2;
 }
 
-// Movimentação para baixo (tecla S)
-if (keyboard_check(ord("S"))) {
-    vel_y = 2;
+// Movimentação para baixo (tecla S ou seta para baixo)
+if (keyboard_check(ord("S")) || keyboard_check(vk_down)) {
+    vel_y = 2;
 }
 
 // Colisão horizontal
