@@ -27,7 +27,9 @@
   "name":"fecip",
   "resources":[
     {"id":{"name":"Obj_back","path":"objects/Obj_back/Obj_back.yy",},},
+    {"id":{"name":"Obj_cerra_horizontal_2","path":"objects/Obj_cerra_horizontal_2/Obj_cerra_horizontal_2.yy",},},
     {"id":{"name":"Obj_cerra_horizontal","path":"objects/Obj_cerra_horizontal/Obj_cerra_horizontal.yy",},},
+    {"id":{"name":"Obj_cerra_vertical_2","path":"objects/Obj_cerra_vertical_2/Obj_cerra_vertical_2.yy",},},
     {"id":{"name":"Obj_cerra_vertical","path":"objects/Obj_cerra_vertical/Obj_cerra_vertical.yy",},},
     {"id":{"name":"Obj_chave","path":"objects/Obj_chave/Obj_chave.yy",},},
     {"id":{"name":"Obj_chave2","path":"objects/Obj_chave2/Obj_chave2.yy",},},
@@ -43,6 +45,7 @@
     {"id":{"name":"Obj_porta2","path":"objects/Obj_porta2/Obj_porta2.yy",},},
     {"id":{"name":"Obj_prox_fase","path":"objects/Obj_prox_fase/Obj_prox_fase.yy",},},
     {"id":{"name":"Obj_prox_fase2","path":"objects/Obj_prox_fase2/Obj_prox_fase2.yy",},},
+    {"id":{"name":"Obj_serra_move_2","path":"objects/Obj_serra_move_2/Obj_serra_move_2.yy",},},
     {"id":{"name":"Obj_serra_move","path":"objects/Obj_serra_move/Obj_serra_move.yy",},},
     {"id":{"name":"Obj_serra","path":"objects/Obj_serra/Obj_serra.yy",},},
     {"id":{"name":"fim","path":"rooms/fim/fim.yy",},},

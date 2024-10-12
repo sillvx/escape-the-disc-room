@@ -9,7 +9,9 @@
   ],
   "ResourceOrderSettings":[
     {"name":"Obj_back","order":18,"path":"objects/Obj_back/Obj_back.yy",},
+    {"name":"Obj_cerra_horizontal_2","order":21,"path":"objects/Obj_cerra_horizontal_2/Obj_cerra_horizontal_2.yy",},
     {"name":"Obj_cerra_horizontal","order":15,"path":"objects/Obj_cerra_horizontal/Obj_cerra_horizontal.yy",},
+    {"name":"Obj_cerra_vertical_2","order":20,"path":"objects/Obj_cerra_vertical_2/Obj_cerra_vertical_2.yy",},
     {"name":"Obj_cerra_vertical","order":14,"path":"objects/Obj_cerra_vertical/Obj_cerra_vertical.yy",},
     {"name":"Obj_chave","order":3,"path":"objects/Obj_chave/Obj_chave.yy",},
     {"name":"Obj_chave2","order":7,"path":"objects/Obj_chave2/Obj_chave2.yy",},
@@ -24,6 +26,7 @@
     {"name":"Obj_porta2","order":12,"path":"objects/Obj_porta2/Obj_porta2.yy",},
     {"name":"Obj_prox_fase","order":10,"path":"objects/Obj_prox_fase/Obj_prox_fase.yy",},
     {"name":"Obj_prox_fase2","order":13,"path":"objects/Obj_prox_fase2/Obj_prox_fase2.yy",},
+    {"name":"Obj_serra_move_2","order":19,"path":"objects/Obj_serra_move_2/Obj_serra_move_2.yy",},
     {"name":"Obj_serra_move","order":6,"path":"objects/Obj_serra_move/Obj_serra_move.yy",},
     {"name":"Obj_serra","order":5,"path":"objects/Obj_serra/Obj_serra.yy",},
     {"name":"fim","order":9,"path":"rooms/fim/fim.yy",},

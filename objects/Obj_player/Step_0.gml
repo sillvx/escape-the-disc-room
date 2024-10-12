@@ -16,6 +16,24 @@ if (!invulneravel && (place_meeting(x, y, Obj_serra) || place_meeting(x, y, Obj_
     }
 }
 
+if (!invulneravel && (place_meeting(x, y, Obj_serra) || place_meeting(x, y, Obj_serra_move_2) || place_meeting(x, y, Obj_cerra_horizontal_2) || place_meeting(x, y, Obj_cerra_vertical_2)))
+{
+    global.vidas -= 1;  // Perde uma vida
+    invulneravel = true;  // Fica invulnerável por um tempo
+    invulneravel_timer = 60;  // Define a duração da invulnerabilidade (1 segundo)
+    
+    // Ativa o tremor da tela ao tomar dano
+    with (Obj_controlador) {
+        shake_intensity = 8;  // Intensidade do tremor
+        shake_duration = 20;  // Duração do tremor (em frames)
+    }
+
+    // Se as vidas acabarem
+    if (global.vidas <= 0) {
+        instance_destroy();  // Destrói o jogador se as vidas chegarem a zero
+    }
+}
+
 
 // Se o jogador está invulnerável, reduz o temporizador
 if (invulneravel) {
