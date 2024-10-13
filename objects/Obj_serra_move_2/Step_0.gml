@@ -1,6 +1,6 @@
 // Atualiza a posição com base na velocidade
-x += vel_x;
-y += vel_y;
+x += vel_x;//variavel da velocidade da serra h
+y += vel_y;//variavel da velocidade da serra v
 
 // Verifica a colisão com paredes
 if (place_meeting(x + vel_x, y, Obj_parede)) {
