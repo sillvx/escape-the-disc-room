@@ -37,12 +37,12 @@ namespace WindowsFormsApplication1
             int buttontag = Convert.ToInt16(senderObject.Tag);
             if (buttontag == respostacerta)
             {
-                pontuacao = pontuacao + 5;
+                pontuacao = pontuacao + 20;
             }
 
             if (numeropergunta == totalperguntas)
             {
-                MessageBox.Show("Parabéns, você chegou ao fim do quiz!" + Environment.NewLine + "Agora é só clicar no botão \"Ranking\" para ver a sua pontuação.");
+                MessageBox.Show("Parabéns, você chegou ao fim do quiz!" + Environment.NewLine + "Clique no botão \"Ranking\" para ver a sua pontuação.");
             }
             numeropergunta++;
             Perguntar(numeropergunta);
