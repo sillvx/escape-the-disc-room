@@ -46,14 +46,16 @@ Antes de rodar o jogo e o quiz, verifique se você possui os seguintes pré-requ
    ```
 2. Abra o projeto no **GameMaker**.
 3. Compile e execute o jogo no ambiente de sua escolha.
-4. Você também pode baixar e rodar o executável do jogo [aqui](/escape%20the%20disc%20room.exe).
+4. Você também pode baixar e rodar o executável do jogo [aqui](./escape%20the%20disc%20room.exe).
 
 ### Quiz (Windows Forms)
 
 1. Navegue até a pasta `edrquiz/`.
 2. Abra o arquivo `.sln` no **Visual Studio**.
 3. Compile e execute o projeto.
-4. Você também pode baixar e rodar o executável do quiz [aqui](./edrquiz/escapethediscroomquiz/bin/Release/escapethediscroomquiz.exe). <!-- Compilar de novo para aplicar as mudanças na pontuação -->
+4. Você também pode baixar e rodar o executável do quiz [aqui](./edrquiz/escapethediscroomquiz/bin/Release/escapethediscroomquiz.exe).
+
+<!-- TODO Compilar de novo para aplicar as mudanças na pontuação -->
 
 ## 📖 Como Jogar
 
