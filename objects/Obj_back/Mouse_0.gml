@@ -1,3 +1,3 @@
-game_restart()
+room_goto(Room0)
 
 

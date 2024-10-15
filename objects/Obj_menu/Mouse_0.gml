@@ -1,4 +1,5 @@
-room_goto(game_over)
+room_goto(Room0) 
+game_restart()
 
 
 

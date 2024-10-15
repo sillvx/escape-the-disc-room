@@ -1,4 +1,6 @@
 {
   "FolderOrderSettings":[],
-  "ResourceOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"Sprite30","order":1,"path":"sprites/Sprite30/Sprite30.yy",},
+  ],
 }
