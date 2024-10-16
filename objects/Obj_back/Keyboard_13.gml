@@ -1,1 +1,1 @@
-room_goto(Room0)
+room_goto(Room0)//uhadfidufsfd
