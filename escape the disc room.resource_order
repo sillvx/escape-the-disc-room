@@ -2,5 +2,10 @@
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
     {"name":"Sprite30","order":1,"path":"sprites/Sprite30/Sprite30.yy",},
+    {"name":"Sprite31","order":2,"path":"sprites/Sprite31/Sprite31.yy",},
+    {"name":"Sprite32","order":3,"path":"sprites/Sprite32/Sprite32.yy",},
+    {"name":"Sprite33","order":4,"path":"sprites/Sprite33/Sprite33.yy",},
+    {"name":"Sprite34","order":5,"path":"sprites/Sprite34/Sprite34.yy",},
+    {"name":"Sprite35","order":6,"path":"sprites/Sprite35/Sprite35.yy",},
   ],
 }
