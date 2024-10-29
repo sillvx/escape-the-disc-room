@@ -1,118 +1,101 @@
-if (!invulneravel && (place_meeting(x, y, Obj_serra) || place_meeting(x, y, Obj_serra_move) || place_meeting(x, y, Obj_cerra_horizontal) || place_meeting(x, y, Obj_cerra_vertical)))
-{
-    global.vidas -= 1;  // Perde uma vida
-    invulneravel = true;  // Fica invulnerável por um tempo
-    invulneravel_timer = 60;  // Define a duração da invulnerabilidade (1 segundo)
+// Detecta dano e ativa invulnerabilidade
+if (!invulneravel && (place_meeting(x, y, Obj_serra) || place_meeting(x, y, Obj_serra_move) || 
+    place_meeting(x, y, Obj_cerra_horizontal) || place_meeting(x, y, Obj_cerra_vertical) || 
+    place_meeting(x, y, Obj_serra_move_2) || place_meeting(x, y, Obj_cerra_horizontal_2) || 
+    place_meeting(x, y, Obj_cerra_vertical_2))) {
     
+    global.vidas -= 1;
+    invulneravel = true;
+    invulneravel_timer = 60;
+
     // Ativa o tremor da tela ao tomar dano
     with (Obj_controlador) {
-        shake_intensity = 8;  // Intensidade do tremor
-        shake_duration = 20;  // Duração do tremor (em frames)
+        shake_intensity = 8;
+        shake_duration = 20;
     }
 
     // Se as vidas acabarem
     if (global.vidas <= 0) {
-        instance_destroy();  // Destrói o jogador se as vidas chegarem a zero
+        instance_destroy();
     }
 }
 
-if (!invulneravel && (place_meeting(x, y, Obj_serra) || place_meeting(x, y, Obj_serra_move_2) || place_meeting(x, y, Obj_cerra_horizontal_2) || place_meeting(x, y, Obj_cerra_vertical_2)))
-{
-    global.vidas -= 1;  // Perde uma vida
-    invulneravel = true;  // Fica invulnerável por um tempo
-    invulneravel_timer = 60;  // Define a duração da invulnerabilidade (1 segundo)
-    
-    // Ativa o tremor da tela ao tomar dano
-    with (Obj_controlador) {
-        shake_intensity = 8;  // Intensidade do tremor
-        shake_duration = 20;  // Duração do tremor (em frames)
-    }
-
-    // Se as vidas acabarem
-    if (global.vidas <= 0) {
-        instance_destroy();  // Destrói o jogador se as vidas chegarem a zero
-    }
-}
-
-
-// Se o jogador está invulnerável, reduz o temporizador
+// Controle de invulnerabilidade
 if (invulneravel) {
     invulneravel_timer -= 1;
-    
-    // Quando o tempo de invulnerabilidade acaba, o jogador pode ser atingido novamente
     if (invulneravel_timer <= 0) {
         invulneravel = false;
     }
 }
 
-// Código de movimentação aqui
+// Código de movimentação para teclado e controle
 var vel_x = 0;
 var vel_y = 0;
 
-// Movimentação para a direita (tecla D ou seta direita)
-if (keyboard_check(ord("D")) || keyboard_check(vk_right)) {
-    vel_x = 2;
+// Controle com teclado
+if (keyboard_check(ord("D")) || keyboard_check(vk_right)) vel_x = 2;
+if (keyboard_check(ord("A")) || keyboard_check(vk_left)) vel_x = -2;
+if (keyboard_check(ord("W")) || keyboard_check(vk_up)) vel_y = -2;
+if (keyboard_check(ord("S")) || keyboard_check(vk_down)) vel_y = 2;
+
+// Controle com gamepad
+var gamepad_id = 0;  // ID do gamepad (normalmente 0 para o primeiro controle)
+
+// Verifica o movimento no D-Pad
+if (gamepad_button_check(gamepad_id, gp_padr)) vel_x = 2;
+if (gamepad_button_check(gamepad_id, gp_padl)) vel_x = -2;
+if (gamepad_button_check(gamepad_id, gp_padu)) vel_y = -2;
+if (gamepad_button_check(gamepad_id, gp_padd)) vel_y = 2;
+
+// Verifica o movimento no eixo X (analógico esquerdo horizontal)
+if (abs(gamepad_axis_value(gamepad_id, gp_axislh)) > 0.1) {
+    vel_x = 2 * sign(gamepad_axis_value(gamepad_id, gp_axislh));
 }
 
-// Movimentação para a esquerda (tecla A ou seta esquerda)
-if (keyboard_check(ord("A")) || keyboard_check(vk_left)) {
-    vel_x = -2;
-}
-
-// Movimentação para cima (tecla W ou seta para cima)
-if (keyboard_check(ord("W")) || keyboard_check(vk_up)) {
-    vel_y = -2;
-}
-
-// Movimentação para baixo (tecla S ou seta para baixo)
-if (keyboard_check(ord("S")) || keyboard_check(vk_down)) {
-    vel_y = 2;
+// Verifica o movimento no eixo Y (analógico esquerdo vertical)
+if (abs(gamepad_axis_value(gamepad_id, gp_axislv)) > 0.1) {
+    vel_y = 2 * sign(gamepad_axis_value(gamepad_id, gp_axislv));
 }
 
 // Colisão horizontal
 if (!place_meeting(x + vel_x, y, Obj_parede)) {
-    x += vel_x; // Mover no eixo X se não houver colisão
+    x += vel_x;
 }
 
 // Colisão vertical
 if (!place_meeting(x, y + vel_y, Obj_parede)) {
-    y += vel_y; // Mover no eixo Y se não houver colisão
-
+    y += vel_y;
 }
 
 // Troca de sprites baseada no movimento
 if (vel_x != 0) {
-    sprite_index = Spr_run;  // Sprite de movimento horizontal
-    image_xscale = sign(vel_x);  // Inverter sprite se movendo para a esquerda (inverte quando vel_x for negativo)
+    sprite_index = Spr_run;
+    image_xscale = sign(vel_x);
 } 
 else if (vel_y != 0) {
-    sprite_index = Spr_run;  // Sprite de movimento vertical
+    sprite_index = Spr_run;
 } 
 else {
-    sprite_index = Spr_player;  // Sprite parado
+    sprite_index = Spr_player;
 }
 
-
-// No evento Step do Obj_player
+// Reinicia o jogo se as vidas acabarem
 if (global.vidas <= 0) {
-    // Código para reiniciar o jogo, ou exibir a tela de game over
-    room_goto(game_over); // Exemplo de reinício
+    room_goto(game_over);
 }
 
-// Verifica se o jogador está invulnerável
+// Efeito de piscar enquanto invulnerável
 if (invulneravel) {
     invulneravel_timer -= 1;
 
-    // Faz o jogador piscar alternando a opacidade
     if (invulneravel_timer mod 20 < 5) {
-        image_alpha = 0.5;  // Metade visível
+        image_alpha = 0.5;
     } else {
-        image_alpha = 1;  // Totalmente visível
+        image_alpha = 1;
     }
 
-    // Quando o tempo de invulnerabilidade acaba, retorna à condição normal
     if (invulneravel_timer <= 0) {
         invulneravel = false;
-        image_alpha = 1;  // Restaura opacidade completa
+        image_alpha = 1;
     }
 }
