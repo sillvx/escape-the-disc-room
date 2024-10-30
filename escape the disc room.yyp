@@ -36,6 +36,7 @@
     {"id":{"name":"Obj_chave3","path":"objects/Obj_chave3/Obj_chave3.yy",},},
     {"id":{"name":"Obj_chave4","path":"objects/Obj_chave4/Obj_chave4.yy",},},
     {"id":{"name":"Obj_controlador","path":"objects/Obj_controlador/Obj_controlador.yy",},},
+    {"id":{"name":"obj_input_controller","path":"objects/obj_input_controller/obj_input_controller.yy",},},
     {"id":{"name":"Obj_menu","path":"objects/Obj_menu/Obj_menu.yy",},},
     {"id":{"name":"Obj_parede","path":"objects/Obj_parede/Obj_parede.yy",},},
     {"id":{"name":"obj_parede2","path":"objects/obj_parede2/obj_parede2.yy",},},

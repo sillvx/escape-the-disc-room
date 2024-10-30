@@ -1,3 +1,58 @@
+// Verifica a colisão com outras instâncias de obj_serra_move
+var other_instance = instance_place(x + vel_x, y + vel_y, Obj_serra_move);
+
+if (other_instance != noone && other_instance != id) {
+    // Inverte a direção ao colidir com outra serra
+    vel_x = -vel_x;
+    vel_y = -vel_y;
+}
+
+// Verifica a colisão com outras instâncias de obj_serra_move_2
+var other_instance = instance_place(x + vel_x, y + vel_y, Obj_serra_move_2);
+
+if (other_instance != noone && other_instance != id) {
+    // Inverte a direção ao colidir com outra serra
+    vel_x = -vel_x;
+    vel_y = -vel_y;
+}
+
+
+// Verifica a colisão com outras instâncias de obj_serra_horizontal
+var other_instance = instance_place(x + vel_x, y + vel_y, Obj_cerra_horizontal);
+
+if (other_instance != noone && other_instance != id) {
+    // Inverte a direção ao colidir com outra serra
+    vel_x = -vel_x;
+    vel_y = -vel_y;
+}
+
+// Verifica a colisão com outras instâncias de obj_serra_horizontal_2
+var other_instance = instance_place(x + vel_x, y + vel_y, Obj_cerra_horizontal_2);
+
+if (other_instance != noone && other_instance != id) {
+    // Inverte a direção ao colidir com outra serra
+    vel_x = -vel_x;
+    vel_y = -vel_y;
+}
+
+// Verifica a colisão com outras instâncias de obj_serra_vertical
+var other_instance = instance_place(x + vel_x, y + vel_y, Obj_cerra_vertical);
+
+if (other_instance != noone && other_instance != id) {
+    // Inverte a direção ao colidir com outra serra
+    vel_x = -vel_x;
+    vel_y = -vel_y;
+}
+
+// Verifica a colisão com outras instâncias de obj_serra_vertical_2
+var other_instance = instance_place(x + vel_x, y + vel_y, Obj_cerra_vertical_2);
+
+if (other_instance != noone && other_instance != id) {
+    // Inverte a direção ao colidir com outra serra
+    vel_x = -vel_x;
+    vel_y = -vel_y;
+}
+
 // Atualiza a posição com base na velocidade
 x += vel_x;
 y += vel_y;

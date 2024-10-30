@@ -1,6 +1,7 @@
 {
   "FolderOrderSettings":[],
   "ResourceOrderSettings":[
+    {"name":"obj_input_controller","order":1,"path":"objects/obj_input_controller/obj_input_controller.yy",},
     {"name":"Sprite30","order":1,"path":"sprites/Sprite30/Sprite30.yy",},
     {"name":"Sprite31","order":2,"path":"sprites/Sprite31/Sprite31.yy",},
     {"name":"Sprite32","order":3,"path":"sprites/Sprite32/Sprite32.yy",},
